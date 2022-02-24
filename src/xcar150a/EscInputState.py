@@ -23,9 +23,6 @@ class State(object):
         pass
 
     def update(self, machine, key="", value=""):
-        print("ANY?")
-        print(self.uart.any())
-        print("====")
         if self.uart.any() == 0:
             machine.idle_state = machine.state.name
             machine.idle()
